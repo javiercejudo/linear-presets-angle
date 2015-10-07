@@ -1,6 +1,6 @@
 {
   "name": "linear-presets-angle",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Linear presets for angle units",
   "main": "src/linear-presets-angle.js",
   "scripts": {
