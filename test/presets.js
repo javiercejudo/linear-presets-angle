@@ -18,11 +18,13 @@ function invert(preset) {
 
 describe('angle presets', function() {
   it('should convert correctly', function() {
-    (Math.PI / 4).should.be.exactly(convert(1 / 8, invert(angle.radian_turn)), 'radian_turn')
+    (Math.PI / 4).should.be.exactly(convert(Math.PI / 4, invert(angle.radian_radian)), 'radian_radian')
+      .and.exactly(convert(1 / 8, invert(angle.radian_turn)), 'radian_turn')
       .and.exactly(convert(45, invert(angle.radian_degree)), 'radian_degree')
       .and.exactly(convert(50, invert(angle.radian_gradian)), 'radian_gradian');
 
-    (0).should.be.exactly(convert(0, angle.radian_turn), 'radian_turn')
+    (0).should.be.exactly(convert(0, angle.radian_radian), 'radian_radian')
+      .and.exactly(convert(0, angle.radian_turn), 'radian_turn')
       .and.exactly(convert(0, angle.radian_degree), 'radian_degree')
       .and.exactly(convert(0, angle.radian_gradian), 'radian_gradian');
   });
